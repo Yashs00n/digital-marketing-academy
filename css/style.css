@@ -21,6 +21,7 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 section {
@@ -40,7 +41,6 @@ section {
     padding: 20px 8%;
 
     background: #ffffff;
-
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -60,6 +60,7 @@ section {
 .nav-links a {
     color: #222;
     font-size: 16px;
+
     transition: opacity 0.2s ease;
 }
 
@@ -72,23 +73,45 @@ section {
    GENERAL BUTTON
 ========================================= */
 
-.btn {
+.btn,
+.hero-button {
     display: inline-block;
 
-    padding: 12px 25px;
+    padding: 13px 28px;
 
     background: #222;
     color: #ffffff;
 
+    border: none;
     border-radius: 6px;
 
+    font-size: 16px;
     font-weight: bold;
 
-    transition: 0.2s ease;
+    cursor: pointer;
+
+    transition: opacity 0.2s ease,
+                transform 0.2s ease;
 }
 
-.btn:hover {
+.btn:hover,
+.hero-button:hover {
     opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   GENERAL SECTION LABEL
+========================================= */
+
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
 }
 
 
@@ -152,39 +175,18 @@ section {
     margin-bottom: 35px;
 }
 
-.hero-button {
-    display: inline-block;
-
-    padding: 15px 30px;
-
-    background: #111;
-    color: #ffffff;
-
-    border-radius: 6px;
-
-    font-weight: bold;
-
-    transition: 0.2s ease;
-}
-
-.hero-button:hover {
-    opacity: 0.8;
-}
-
 
 /* =========================================
-   ABOUT SECTION
+   INDEX - ABOUT SECTION
 ========================================= */
 
 .about-section {
     padding: 70px 8%;
-
     text-align: center;
 }
 
 .about-section h2 {
     font-size: 36px;
-
     margin-bottom: 20px;
 }
 
@@ -194,24 +196,21 @@ section {
     margin: auto;
 
     font-size: 18px;
-
     line-height: 1.7;
 }
 
 
 /* =========================================
-   SKILLS SECTION
+   INDEX - SKILLS SECTION
 ========================================= */
 
 .skills {
     padding: 70px 8%;
-
     text-align: center;
 }
 
 .skills h2 {
     font-size: 36px;
-
     margin-bottom: 20px;
 }
 
@@ -229,7 +228,6 @@ section {
     padding: 30px;
 
     border: 1px solid #ddd;
-
     border-radius: 10px;
 
     background: #ffffff;
@@ -260,13 +258,11 @@ section {
 
 .cta h2 {
     font-size: 36px;
-
     margin-bottom: 15px;
 }
 
 .cta p {
     font-size: 18px;
-
     margin-bottom: 25px;
 }
 
@@ -285,18 +281,7 @@ section {
 
 .problem-content {
     max-width: 1000px;
-
     margin: auto;
-}
-
-.section-label {
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 15px;
 }
 
 .problem-section h2 {
@@ -313,7 +298,6 @@ section {
     margin: auto;
 
     font-size: 18px;
-
     line-height: 1.6;
 }
 
@@ -368,7 +352,6 @@ section {
 
 .solution-content {
     max-width: 1100px;
-
     margin: auto;
 }
 
@@ -386,7 +369,6 @@ section {
     margin: auto;
 
     font-size: 18px;
-
     line-height: 1.6;
 }
 
@@ -408,7 +390,6 @@ section {
     background: #ffffff;
 
     border: 1px solid #ddd;
-
     border-radius: 10px;
 
     transition: transform 0.2s ease;
@@ -420,7 +401,6 @@ section {
 
 .solution-card span {
     font-size: 14px;
-
     font-weight: bold;
 }
 
@@ -449,7 +429,6 @@ section {
 
 .benefits-content {
     max-width: 1100px;
-
     margin: auto;
 }
 
@@ -467,7 +446,6 @@ section {
     margin: auto;
 
     font-size: 18px;
-
     line-height: 1.6;
 }
 
@@ -489,7 +467,6 @@ section {
     background: #ffffff;
 
     border: 1px solid #ddd;
-
     border-radius: 10px;
 
     transition: transform 0.2s ease;
@@ -509,7 +486,6 @@ section {
 
 .benefit-card h3 {
     font-size: 22px;
-
     margin-bottom: 12px;
 }
 
@@ -532,7 +508,6 @@ section {
 
 .offer-content {
     max-width: 800px;
-
     margin: auto;
 }
 
@@ -658,7 +633,7 @@ section {
 
     cursor: pointer;
 
-    transition: 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .form-button:hover {
@@ -669,6 +644,8 @@ section {
     margin-top: 20px;
 
     font-weight: bold;
+
+    text-align: center;
 }
 
 
@@ -686,12 +663,7 @@ section {
 
 .courses-content {
     max-width: 850px;
-
     margin: auto;
-}
-
-.courses-content .section-label {
-    margin-bottom: 10px;
 }
 
 .courses-content h1 {
@@ -727,7 +699,6 @@ section {
 
 .courses-container {
     max-width: 1100px;
-
     margin: auto;
 }
 
@@ -838,6 +809,468 @@ section {
 
 
 /* =========================================
+   ABOUT PAGE - HERO
+========================================= */
+
+.about-hero {
+    padding: 110px 8%;
+
+    text-align: center;
+
+    background: #f3f7ff;
+}
+
+.about-hero-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.about-hero p:not(.section-label) {
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT PAGE - ACADEMY
+========================================= */
+
+.academy-section {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.academy-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.academy-section h2 {
+    font-size: 40px;
+
+    margin-bottom: 25px;
+}
+
+.academy-content p:not(.section-label) {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT PAGE - MISSION
+========================================= */
+
+.mission-section {
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background: #f3f7ff;
+}
+
+.mission-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.mission-section h2 {
+    font-size: 40px;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+.mission-content p:not(.section-label) {
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT PAGE - APPROACH
+========================================= */
+
+.approach-section {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.approach-content {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.approach-section h2 {
+    font-size: 40px;
+
+    margin-bottom: 40px;
+}
+
+.approach-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.approach-card {
+    padding: 35px;
+
+    text-align: left;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition: transform 0.2s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-4px);
+}
+
+.approach-card span {
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.approach-card h3 {
+    font-size: 24px;
+
+    margin: 15px 0;
+}
+
+.approach-card p {
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT PAGE - WHY CHOOSE US
+========================================= */
+
+.why-section {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background: #f3f7ff;
+}
+
+.why-content {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.why-section h2 {
+    font-size: 40px;
+
+    margin-bottom: 40px;
+}
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.why-card {
+    padding: 35px;
+
+    text-align: left;
+
+    background: #ffffff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    transition: transform 0.2s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-4px);
+}
+
+.why-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT PAGE - CTA
+========================================= */
+
+.about-cta {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.about-cta h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.about-cta p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   CONTACT PAGE - HERO
+========================================= */
+
+.contact-hero {
+    padding: 110px 8%;
+
+    text-align: center;
+
+    background: #f3f7ff;
+}
+
+.contact-hero-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.contact-hero h1 {
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.contact-hero p:not(.section-label) {
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CONTACT PAGE - MAIN SECTION
+========================================= */
+
+.contact-section {
+    padding: 90px 8%;
+
+    background: #ffffff;
+}
+
+.contact-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* CONTACT INFO */
+
+.contact-info h2 {
+    font-size: 38px;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+.contact-info > p:not(.section-label) {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.contact-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.contact-detail {
+    padding: 22px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.contact-detail h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.contact-detail p {
+    line-height: 1.6;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form-container {
+    padding: 35px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background: #f9fbff;
+}
+
+.contact-form-container h2 {
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+#contactForm {
+    display: flex;
+
+    flex-direction: column;
+}
+
+#contactForm label {
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-family: Arial, sans-serif;
+
+    background: #ffffff;
+}
+
+#contactForm textarea {
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+
+    border-color: #111;
+}
+
+
+/* CONTACT CTA */
+
+.contact-cta {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background: #f3f7ff;
+}
+
+.contact-cta h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.contact-cta p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* CONTACT MESSAGE */
+
+#contact-message {
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
    FOOTER
 ========================================= */
 
@@ -848,7 +1281,7 @@ footer {
 
     background: #ffffff;
 
-    border-top: 1px solid #eee;
+    border-top: 1px solid #eeeeee;
 }
 
 footer p {
@@ -857,7 +1290,7 @@ footer p {
 
 
 /* =========================================
-   TABLET
+   TABLET RESPONSIVE
 ========================================= */
 
 @media (max-width: 900px) {
@@ -873,11 +1306,15 @@ footer p {
     .course-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
 /* =========================================
-   MOBILE
+   MOBILE RESPONSIVE
 ========================================= */
 
 @media (max-width: 768px) {
@@ -901,7 +1338,7 @@ footer p {
     }
 
 
-    /* HERO */
+    /* GENERAL HERO */
 
     .hero {
         min-height: 600px;
@@ -919,24 +1356,17 @@ footer p {
     }
 
 
-    /* ABOUT */
+    /* INDEX */
 
-    .about-section {
+    .about-section,
+    .skills,
+    .cta {
         padding: 60px 6%;
     }
 
-    .about-section h2 {
-        font-size: 30px;
-    }
-
-
-    /* SKILLS */
-
-    .skills {
-        padding: 60px 6%;
-    }
-
-    .skills h2 {
+    .about-section h2,
+    .skills h2,
+    .cta h2 {
         font-size: 30px;
     }
 
@@ -945,63 +1375,30 @@ footer p {
     }
 
 
-    /* PROBLEM */
+    /* LANDING */
 
-    .problem-section {
-        padding: 70px 6%;
-    }
-
-    .problem-section h2 {
-        font-size: 30px;
-    }
-
-    .problem-list {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* SOLUTION */
-
-    .solution-section {
-        padding: 70px 6%;
-    }
-
-    .solution-section h2 {
-        font-size: 30px;
-    }
-
-    .solution-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* BENEFITS */
-
+    .problem-section,
+    .solution-section,
     .benefits-section {
         padding: 70px 6%;
     }
-
-    .benefits-section h2 {
-        font-size: 30px;
-    }
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* OFFER */
 
     .offer-section {
         padding: 75px 6%;
     }
 
+    .problem-section h2,
+    .solution-section h2,
+    .benefits-section h2,
     .offer-section h2 {
         font-size: 30px;
     }
 
-
-    /* FORM */
+    .problem-list,
+    .solution-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
 
     .lead-form-section {
         padding: 75px 20px;
@@ -1047,13 +1444,75 @@ footer p {
     }
 
 
-    /* CTA */
+    /* ABOUT */
 
-    .cta {
-        padding: 60px 6%;
+    .about-hero {
+        padding: 80px 6%;
     }
 
-    .cta h2 {
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .academy-section,
+    .mission-section,
+    .approach-section,
+    .why-section,
+    .about-cta {
+        padding: 70px 6%;
+    }
+
+    .academy-section h2,
+    .mission-section h2,
+    .approach-section h2,
+    .why-section h2,
+    .about-cta h2 {
+        font-size: 30px;
+    }
+
+    .approach-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CONTACT */
+
+    .contact-hero {
+        padding: 80px 6%;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-section {
+        padding: 70px 6%;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .contact-info h2 {
+        font-size: 30px;
+    }
+
+    .contact-form-container {
+        padding: 25px;
+    }
+
+    .contact-form-container h2 {
+        font-size: 26px;
+    }
+
+    .contact-cta {
+        padding: 70px 6%;
+    }
+
+    .contact-cta h2 {
         font-size: 30px;
     }
 }
@@ -1065,6 +1524,10 @@ footer p {
 
 @media (max-width: 480px) {
 
+    .logo {
+        font-size: 20px;
+    }
+
     .hero h1 {
         font-size: 32px;
     }
@@ -1073,7 +1536,8 @@ footer p {
         font-size: 16px;
     }
 
-    .hero-button {
+    .hero-button,
+    .btn {
         padding: 13px 22px;
     }
 
@@ -1092,228 +1556,13 @@ footer p {
     .form-intro {
         font-size: 16px;
     }
-}
 
-
-
-
-/* =========================================
-   ABOUT PAGE
-========================================= */
-
-/* ABOUT HERO */
-
-.about-hero {
-    padding: 110px 8%;
-    text-align: center;
-    background: #f3f7ff;
-}
-
-.about-hero-content {
-    max-width: 850px;
-    margin: auto;
-}
-
-.about-hero h1 {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.about-hero p:not(.section-label) {
-    max-width: 700px;
-    margin: auto;
-    font-size: 19px;
-    line-height: 1.7;
-}
-
-
-/* ABOUT ACADEMY */
-
-.academy-section {
-    padding: 90px 8%;
-    text-align: center;
-    background: #ffffff;
-}
-
-.academy-content {
-    max-width: 850px;
-    margin: auto;
-}
-
-.academy-section h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
-}
-
-.academy-content p:not(.section-label) {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-
-/* MISSION */
-
-.mission-section {
-    padding: 100px 8%;
-    text-align: center;
-    background: #f3f7ff;
-}
-
-.mission-content {
-    max-width: 850px;
-    margin: auto;
-}
-
-.mission-section h2 {
-    font-size: 40px;
-    line-height: 1.3;
-    margin-bottom: 20px;
-}
-
-.mission-content p:not(.section-label) {
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-
-/* LEARNING APPROACH */
-
-.approach-section {
-    padding: 90px 8%;
-    text-align: center;
-    background: #ffffff;
-}
-
-.approach-content {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.approach-section h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
-}
-
-.approach-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.approach-card {
-    padding: 35px;
-    text-align: left;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #ffffff;
-}
-
-.approach-card span {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.approach-card h3 {
-    font-size: 24px;
-    margin: 15px 0;
-}
-
-.approach-card p {
-    line-height: 1.7;
-}
-
-
-/* WHY CHOOSE US */
-
-.why-section {
-    padding: 90px 8%;
-    text-align: center;
-    background: #f3f7ff;
-}
-
-.why-content {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.why-section h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
-}
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.why-card {
-    padding: 35px;
-    text-align: left;
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
-
-.why-card h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.why-card p {
-    line-height: 1.7;
-}
-
-
-/* ABOUT CTA */
-
-.about-cta {
-    padding: 90px 8%;
-    text-align: center;
-    background: #ffffff;
-}
-
-.about-cta h2 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.about-cta p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-
-/* =========================================
-   ABOUT PAGE RESPONSIVE
-========================================= */
-
-@media (max-width: 768px) {
-
-    .about-hero {
-        padding: 80px 6%;
-    }
-
+    .contact-hero h1,
     .about-hero h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
-    .academy-section h2,
-    .mission-section h2,
-    .approach-section h2,
-    .why-section h2,
-    .about-cta h2 {
-        font-size: 30px;
+    .contact-form-container {
+        padding: 20px;
     }
-
-    .approach-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
 }
