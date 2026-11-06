@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const scriptURL =
-        "https://script.google.com/macros/s/AKfycbx2kGYNdBMysbLgnFvHTx2AQtCrUVOpp2YI7CG1DMctEXVFI1N9NrsFdAvGgFyaDph9/exec";
+        "https://script.google.com/macros/s/AKfycbyxdIJX11nYXRSF7Uo5W6DgPO_X7dxHvjcF3EitOU3tzAHshIqF-smFQe3B7nBH5Pda/exec";
 
     form.addEventListener("submit", function (event) {
 
